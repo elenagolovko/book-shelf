@@ -1,37 +1,22 @@
 <h1>
   Welcome to the {{ title }}!
 </h1>
-<button class="add-button" type="button" (click)="add(newBookTitle.value, newBookAuthor.value)">
-  Add new book
-</button>
-<div>
-  <div *ngFor="let book of bookList" var index=index class="book__content">
-    <ul (click)="show(book)">
-      <li>{{book.bookTitle}}</li>
-      <!-- при нажатии показать подробную информацию -->
-      <li>{{book.authors}}</li>
-      <button class="delete-button" type="button" (click)="delete(index)"></button>
-      <!-- при нажатии удалить текуший ul -->
-    </ul>
-  </div>
+<div class="book__new">
+  <button class="add-button" type="button">
+    Add new book
+  </button>
 </div>
+<!-- <div class="book__content">
+  <ul (click)="show(book)">
+    <li>{{book.bookTitle}}</li>
+    <li>{{book.authors}}</li>
+    <button class="delete-button" type="button" (click)="delete(index)"></button>
+  </ul>
+</div> -->
+<!-- <book *ngFor="let book of bookList; let index=index;"
+  [bookList]="bookList"
+  [book]="book"
+  [index]="index">
+</book> -->
 
-<template id="book">
-  <form class="book__form" action="" method="POST">
-    <legend>Tell more about new book!</legend>
-    <fieldset>
-      <label>Book title<input #newBookTitle id="newTitle" type="text"></label>
-      <label class="book__authors">Author(s)<input #newBookAuthor id="newAuthors" type="text"></label>
-      <label>Number of pages<input id="newPages" type="text"></label>
-      <label>Publisher name<input id="newPublisherName" type="text"></label>
-      <label>Year of publication<input id="newYearOfPublication" type="text"></label>
-      <label>Release date<input id="newReleaseDate" type="text"></label>
-      <label>ISBN<input id="newIsbn" type="text"></label>
-    </fieldset>
-    <fieldset class="img-upload__start">
-      <input type="file" id="upload-file" class="img-upload__input visually-hidden" name="filename" required>
-      <label for="upload-file" class="img-upload__label img-upload__control">Загрузить</label>
-    </fieldset>
-  </form>
-</template>
 

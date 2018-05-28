@@ -1,0 +1,10 @@
+<h2>Book Shelf</h2>
+
+<p><i>Pick a book from the list</i></p>
+<ul>
+  <li *ngFor="let book of bookList" (click)="selectBook(book)">
+    {{book.bookTitle}}
+  </li>
+</ul>
+
+<app-book-detail *ngIf="selectedBook" [book]="selectedBook"></app-book-detail>

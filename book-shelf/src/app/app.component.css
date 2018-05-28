@@ -2,24 +2,6 @@ h1 {
   text-align: center;
 }
 
-/* .visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-} */
-
 .add-button {
   display: block;
   margin: 0 auto;
@@ -32,78 +14,8 @@ h1 {
   font-weight: bold;
 }
 
-div, form {
+div {
   max-width: 660px;
   margin: 0 auto;
 }
 
-ul {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px 0 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-ul:hover {
-  border: 1px solid black;
-  cursor: pointer;
-}
-
-li {
-  padding: 15px;
-  font-style: italic;
-}
-
-.delete-button {
-  margin: 0 25px;
-  position: relative;
-  left: -35px;
-  border: none;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-
-.deleted {
-  display: none;
-}
-
-.delete-button::after {
-  content: '';
-  position: absolute;
-  right: -1px;
-  width: 15px;
-  height: 2px;
-  transform: rotate(45deg);
-  background-color: #000000;
-}
-
-.delete-button::before {
-  content: '';
-  position: absolute;
-  right: -1px;
-  width: 15px;
-  height: 2px;
-  transform: rotate(-45deg);
-  background-color: #000000;
-}
-
-fieldset {
-  display: flex;
-  flex-direction: column;
-  border: none;
-}
-
-legend {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-label {
-  padding-bottom: 20px;
-}
-
-input {
-  margin-left: 10px;
-  float: right;
-}
