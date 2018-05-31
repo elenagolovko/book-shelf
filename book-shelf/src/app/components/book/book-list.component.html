@@ -1,9 +1,54 @@
-<h2>Book Shelf</h2>
+<button class="add-button" (click)="
+                           addItem(newBookTitle.value,
+                                   newBookAuthor.value,
+                                   newBookPages.value,
+                                   newBookPublisher.value,
+                                   newBookYearPublished.value,
+                                   newBookReleaseDate.value,
+                                   newBookIsbn.value,
+                                   newBookImage.value
+                                  ); clearInputs();">
+  Add new book
+</button>
 
-<p><i>Pick a book from the list</i></p>
+<div class="book__info-inputs">
+  <label>Title:
+      <input #newBookTitle>
+  </label>
+  <label>Author:
+      <input #newBookAuthor>
+  </label>
+  <label>Pages:
+      <input #newBookPages>
+  </label>
+  <label>Publisher Name:
+      <input #newBookPublisher>
+  </label>
+  <label>Year of publication:
+      <input #newBookYearPublished>
+  </label>
+  <label>Release date:
+      <input #newBookReleaseDate>
+  </label>
+  <label>ISBN:
+      <input #newBookIsbn>
+  </label>
+  <fieldset class="img-upload__start">
+    <input type="file" id="upload-file" class="img-upload__input visually-hidden" name="filename" (change)="uploadImage()">
+    <label for="upload-file">Загрузить изображение</label>
+    <label class="visually-hidden">Image:
+        <input class="img-hiddden__input" #newBookImage>
+    </label>
+  </fieldset>
+</div>
+
+
+<p>Pick a book from the list to see details</p>
 <ul>
-  <li *ngFor="let book of bookList" (click)="selectBook(book)">
-    {{book.bookTitle}}
+  <li *ngFor="let book of bookList; let index=index" (click)="selectBook(book)">
+    {{'"' + book.bookTitle + '"'}}
+    <p>{{book.authors}}</p>
+    <button class="button-delete" (click)="delete(book, index)"></button>
   </li>
 </ul>
 

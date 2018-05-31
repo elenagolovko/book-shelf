@@ -14,7 +14,7 @@ import { BookDetailComponent } from './components/book/book-detail.component';
   declarations: [
     AppComponent,
     BookDetailComponent,
-    BookListComponent
+    BookListComponent,
   ],
   imports: [
     BrowserModule,

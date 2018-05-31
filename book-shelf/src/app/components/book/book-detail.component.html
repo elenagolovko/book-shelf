@@ -1,7 +1,39 @@
 <hr>
-<h4>{{book.bookTitle}} Detail</h4>
-<label>Name:
-  <input [(ngModel)]="book.bookTitle">
-</label>
-<br />
-<label>Authors: <input [(ngModel)]="book.authors"></label>
+<h4>{{book.bookTitle}}</h4>
+
+<div class="book__info">
+  <div class="img-upload">
+    <img src="{{book.image}}" width="200" height="300" alt="Обложка книги">
+  </div>
+
+  <div class="book__info-inputs">
+    <label>Name:
+      <input [(ngModel)]="book.bookTitle">
+    </label>
+
+    <label (click)="show()">Authors:
+      <input [(ngModel)]="book.authors">
+    </label>
+
+    <label>Pages:
+      <input [(ngModel)]="book.pages">
+    </label>
+
+    <label>Publisher Name:
+      <input [(ngModel)]="book.publisherName">
+    </label>
+
+    <label>Year of publication:
+      <input [(ngModel)]="book.yearOfPublication">
+    </label>
+
+    <label>Release date:
+      <input [(ngModel)]="book.releaseDate">
+    </label>
+
+    <label>ISBN:
+      <input [(ngModel)]="book.isbn">
+    </label>
+  </div>
+</div>
+
