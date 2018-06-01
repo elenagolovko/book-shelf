@@ -1,4 +1,4 @@
-<button class="add-button" (click)="
+<button class="add-button" type="submit" (click)="
                            addItem(newBookTitle.value,
                                    newBookAuthor.value,
                                    newBookPages.value,
@@ -7,22 +7,22 @@
                                    newBookReleaseDate.value,
                                    newBookIsbn.value,
                                    newBookImage.value
-                                  ); clearInputs();">
+                                  ); handleInputs(event);">
   Add new book
 </button>
 
 <div class="book__info-inputs">
   <label>Title:
-      <input #newBookTitle>
+      <input class="" #newBookTitle pattern="[A-Za-zА-Яа-яЁё]{1,30}" required>
   </label>
   <label>Author:
-      <input #newBookAuthor>
+      <input #newBookAuthor required>
   </label>
   <label>Pages:
-      <input #newBookPages>
+      <input #newBookPages pattern="\d{1,5}" required>
   </label>
   <label>Publisher Name:
-      <input #newBookPublisher>
+      <input #newBookPublisher pattern="[A-Za-zА-Яа-яЁё]{1,30}">
   </label>
   <label>Year of publication:
       <input #newBookYearPublished>

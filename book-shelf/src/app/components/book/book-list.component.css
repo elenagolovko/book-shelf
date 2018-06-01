@@ -85,3 +85,7 @@ fieldset {
   height: 2px;
   transform: rotate(-45deg);
 }
+
+.invalid {
+  border-color: red;
+}

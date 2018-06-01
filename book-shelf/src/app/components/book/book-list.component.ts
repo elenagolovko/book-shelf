@@ -43,10 +43,20 @@ export class BookListComponent implements OnInit {
     }
   }
 
+  checkValidity(input){
+    var validity = input.validity;
 
-  clearInputs() {
+    if (validity.patternMismatch) {
+      input.classList.add('invalid');
+      input.setCustomValidity('This is the wrong pattern for this field');
+    }
+    input.classList.remove('invalid');
+  }
+
+  handleInputs(evt) {
     var inputs = document.querySelectorAll('input');
     for (let input of inputs) {
+      this.checkValidity(input);
       input.value = '';
     }
   }
